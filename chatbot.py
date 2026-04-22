@@ -5,7 +5,7 @@ import google.generativeai as ai
 # 2. Gemini API setup
 api_key = st.secrets["GEMINI_API_KEY"]
 
-model_name = 'gemini-3.1-flash-lite-preview'
+model_name = 'gemini-1.5-flash' # Use the stable version instead of lite-preview
 ai.configure(api_key=api_key)
 model = ai.GenerativeModel(model_name=model_name)
 # 3. Page title
