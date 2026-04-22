@@ -2,12 +2,16 @@
 import streamlit as st
 import google.generativeai as ai
 
-# 2. Gemini API setup
+
+
+# 1. Get the API key from Streamlit secrets
 api_key = st.secrets["GEMINI_API_KEY"]
 
-model_name = 'gemini-1.5-flash'
+# 2. Gemini API setup
 ai.configure(api_key=api_key)
-model = ai.GenerativeModel(model_name=model_name)
+
+# 3. Initialize the model using the correct, stable model name
+model = ai.GenerativeModel('gemini-1.5-flash')
 # 3. Page title
 st.title('Chat with our AI✨', text_alignment='center')
 st.subheader('Ask our AI anything about nutrition facts, food, etc.')
