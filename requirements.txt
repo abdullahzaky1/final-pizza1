@@ -2,3 +2,4 @@ supabase
 psycopg2-binary
 toml
 google-generativeai
+streamlit
